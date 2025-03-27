@@ -3,8 +3,8 @@ import pandas as pd
 import joblib
 
 # Load Model & Scaler
-model = joblib.load("song_popularity_model(2).pkl")
-scaler = joblib.load("scaler(1).pkl")
+model = joblib.load("song_popularity_model.pkl")
+scaler = joblib.load("scaler.pkl")
 
 # Load Dataset
 df = pd.read_csv("Spotify most streamed.csv")
