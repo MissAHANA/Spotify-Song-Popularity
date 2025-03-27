@@ -42,8 +42,17 @@ else:
     st.warning(f"❌ **{song_choice} by {artist} is NOT a hit.**")
 
 # Show Distribution of Streams
-st.subheader("📊 Distribution of Streams")
-st.hist(df["Streams"], bins=50)
+import matplotlib.pyplot as plt
+import seaborn as sns
+import streamlit as st
+
+# Create histogram
+fig, ax = plt.subplots()
+sns.histplot(df["Streams"], bins=50, kde=True, ax=ax)
+
+# Display in Streamlit
+st.pyplot(fig)
+
 
 
 
